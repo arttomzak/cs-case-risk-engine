@@ -6,7 +6,6 @@ import json
 from dotenv import load_dotenv
 load_dotenv()
 
-
 API_KEY = os.getenv("STEAMWEBAPI_KEY")
 
 base_url = "https://www.steamwebapi.com/steam/api/cs/collection"
@@ -16,7 +15,6 @@ slug = "the-revolver-case-collection"
 
 
 final_url = f"{base_url}/{slug}"
-
 
 response = requests.get(final_url, params={"key": API_KEY})
 

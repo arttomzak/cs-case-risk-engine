@@ -1,27 +1,29 @@
 // drop.hpp
+
 #pragma once
 
 #include <string>
 
 using namespace std;
 
-// this needs data on 
+class Drop {
 
-// minimum + maximum float -> gonna need to parse diff json
+public:
 
-// markethashname -> StatTrak xxx (Fac New)
-// generate proper float then stattrak or nah then fetch price
+    // fields
+    string slug;
+    string rarity; // 
+    string wear;
+    double price; // pricereal - cash price NICE!
+    bool isstattrak;
 
-// quality (stat trak - normal or ST)
-
-
-
-struct Drop {
-
-    string hash_name;
-    string quality;
-    double pricelatest;
-
-
+    // constructor
+    Drop(string& slug, string& rarity, string& wear, double& price, bool& isstattrak)
+        : slug(slug), rarity(rarity), wear(wear), price(price), isstattrak(isstattrak) {}
+        
+    
+    string getRarity() const { // this const returns a read-only reference, allowing us to call it on a const Drop
+        return rarity;
+    }
 
 };

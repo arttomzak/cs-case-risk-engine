@@ -1,4 +1,7 @@
+// main.cpp
+
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -19,6 +22,9 @@ int main() {
         if (userInput == "q") {
             break;
         }
+        else {
+            
+        }
 
         
 
@@ -29,11 +35,6 @@ int main() {
 
 
     }
-
-
-
-
-
 
 
     return 0;

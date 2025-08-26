@@ -9,20 +9,32 @@
 
 using namespace std;
 
-class Drop {
+class Case {
 
 public:
-    // keeping these as public for now
+    // fields
     string name;
-    unordered_map<string, vector<Drop>> rarityToSkinVec;
-    vector<Drop> skinVec;
+
+
+    // RNG FLOW, determine rarity, get the equally weighted group name, access bottom dict, and get the float / ST or not
+    
+    unordered_map<string, vector<string>> rarityToGroupNames; // GROUP NAMES HERE
+    unordered_map<string, vector<pair<Drop, Drop>>> skinGroupToSTPair;
+
+    // !!!!!!!!!!
+
+    vector<Drop> drops;
+
 
     // constructor
-    Drop(string& name);
+    Case(string& name) : name(name) {}
 
-    // adds a drop to the case object
-    // MEANT FOR USE DURING THE DATA LOADING PHASE
-    void addDrop(const Drop& drop);
+
+    // adds a drop to the case object (used during data ingestion)
+    void addDrop(const Drop& drop) {
+        string& rarity = drop.getRarity();
+
+    }
 
 };
 
