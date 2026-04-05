@@ -11,15 +11,13 @@ using namespace std;
 
 int main() {
     string userInput;
-    optional<Case> loadedCase;
+    optional<CS_Case> loadedCase;
 
     while (true) {
 
         cout << endl;
         cout << "Welcome to the Counter-Strike Case Profitability Simulator!" << endl;
         cout << "Enter 'q' at any time to close the program" << endl;
-        cout << endl;
-        cout << "Please enter the name of a case :)" << endl;
         cout << endl;
         
         getline(cin, userInput);
@@ -37,7 +35,8 @@ int main() {
         // if LoadedCase -> run simulation
         }
         else {
-        // do nothing yo
+        // typed in a case name we wanna do some kind of matching
+        // 
         }
       
         cout << endl;

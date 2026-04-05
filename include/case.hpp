@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Case {
+class CS_Case { // apparently case is a restricted keyword
 
 public:
     // fields
@@ -20,7 +20,7 @@ public:
     unordered_map<string, vector<SkinGroup>> rarityToSkinGroup;
 
     // constructor
-    Case(string& name) : name(name) {}
+    CS_Case(string& name) : name(name) {}
 
     void addSkinGroup(const SkinGroup& group) {
       rarityToSkinGroup[group.rarity].push_back(group);
