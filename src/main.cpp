@@ -6,6 +6,7 @@
 
 #include "case.hpp"
 #include "loader.hpp"
+#include "simulator.hpp"
 
 using namespace std;
 
@@ -31,8 +32,13 @@ int main() {
                 cout << entry.first << ": " << entry.second.size() << " groups" << endl;
             }
         }
-        else if (userInput == "s") { // simulate 
-        // if LoadedCase -> run simulation
+        else if (userInput == "s") { // simulate
+            if (!loadedCase.has_value()) {
+                cout << "No case loaded. Use 'p' first." << endl;
+            } else {
+                Simulator sim;
+                sim.runSimulation(loadedCase.value(), 1'000'000);
+            }
         }
         else {
         // typed in a case name we wanna do some kind of matching

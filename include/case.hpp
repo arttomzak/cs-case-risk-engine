@@ -14,12 +14,10 @@ class CS_Case { // apparently case is a restricted keyword
 public:
     // fields
     string name;
+    double price = 0.0;
 
-    // this maps from a rarity to a vector of SkinGroup
-    // objects which will aid in pulling a random skip 
     unordered_map<string, vector<SkinGroup>> rarityToSkinGroup;
 
-    // constructor
     CS_Case(string& name) : name(name) {}
 
     void addSkinGroup(const SkinGroup& group) {

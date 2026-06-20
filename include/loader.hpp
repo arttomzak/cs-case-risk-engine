@@ -20,9 +20,13 @@ CS_Case loadCase(const string& filepath) {
   string casename = "revolver";
   CS_Case curCase = CS_Case(casename); // hardcoded for now
 
+  curCase.price = data["container"]["groupitems"][0]["pricereal"];
+  cout << "case price: " << curCase.price << endl;
+
   for (auto& item : data["items"]) {
     string name = item["groupname"];
     string rarity = item["tag6"];
+
     vector<Drop> drops;
     SkinGroup curSkinGroup = SkinGroup(name, rarity, drops);
 
